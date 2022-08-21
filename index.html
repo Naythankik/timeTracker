@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="child-container">
+        <div class="left-container">
+          <div class="user-details">
+            <div class="user-image">
+              <object
+                data="./images/image-jeremy.png"
+                type="image/png"
+              ></object>
+            </div>
+            <div class="user-info">
+              <span class="report">Report for</span>
+              <p>Jeremy Robson</p>
+            </div>
+          </div>
+          <div class="user-schedule">
+            <button type="submit" onclick="chart(this)">Daily</button>
+            <button type="submit" onclick="chart(this)">Weekly</button>
+            <button type="submit" onclick="chart(this)">Monthly</button>
+          </div>
+        </div>
+        <div class="right-container">
+          <article>
+            <div class="task-image">
+              <!-- <img src="./images/icon-work.svg" type="image/svg" alt="Work" /> -->
+              <div class="task-details">
+                <div class="task-title">
+                  <h3>Work</h3>
+                  <img src="./images/icon-ellipsis.svg" alt="ellipse" />
+                </div>
+                <div class="task-duration">
+                  <h1>32hrs</h1>
+                  <span class="task">Last week-36hrs</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="task-image">
+              <!-- <img src="./images/icon-play.svg" type="image/svg" alt="play" /> -->
+              <div class="task-details">
+                <div class="task-title">
+                  <h3>Play</h3>
+                  <img src="./images/icon-ellipsis.svg" alt="ellipse" />
+                </div>
+                <div class="task-duration">
+                  <h1>10hrs</h1>
+                  <span class="task">Last week-8hrs</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="task-image">
+              <div class="task-details">
+                <div class="task-title">
+                  <h3>Study</h3>
+                  <img src="./images/icon-ellipsis.svg" alt="ellipse" />
+                </div>
+                <div class="task-duration">
+                  <h1>4hrs</h1>
+                  <span class="task">Last week-7hrs</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="task-image">
+              <div class="task-details">
+                <div class="task-title">
+                  <h3>Exercise</h3>
+                  <img src="./images/icon-ellipsis.svg" alt="ellipse" />
+                </div>
+                <div class="task-duration">
+                  <h1>4hrs</h1>
+                  <span class="task">Last week-5hrs</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="task-image">
+              <div class="task-details">
+                <div class="task-title">
+                  <h3>Social</h3>
+                  <img src="./images/icon-ellipsis.svg" alt="ellipse" />
+                </div>
+                <div class="task-duration">
+                  <h1>5hrs</h1>
+                  <span class="task">Last week-10hrs</span>
+                </div>
+              </div>
+            </div>
+          </article>
+          <article>
+            <div class="task-image">
+              <div class="task-details">
+                <div class="task-title">
+                  <h3>Self Care</h3>
+                  <img src="./images/icon-ellipsis.svg" alt="ellipse" />
+                </div>
+                <div class="task-duration">
+                  <h1>2hrs</h1>
+                  <span class="task">Last week-2hrs</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
