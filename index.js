@@ -125,8 +125,44 @@ let dataForEachUser = [
   },
 ];
 
+let timeUsed = document.querySelectorAll(".time");
+let totalTime = document.querySelectorAll(".task");
+
 let chart = (element) => {
-  if (element.textContent.toLowerCase() === dataForEachUser.timeframes.daily) {
-    console.log(element);
+  for (let i = 0; i < totalTime.length; i++) {
+    if (element.textContent.toLowerCase() == "daily") {
+      element.style.color = "white";
+      element.nextElementSibling.style.color = "hsl(246, 80%, 60%)";
+      element.nextElementSibling.nextElementSibling.style.color =
+        "hsl(246, 80%, 60%)";
+      timeUsed[
+        i
+      ].innerHTML = `${dataForEachUser[i].timeframes.daily.current}hrs`;
+      totalTime[
+        i
+      ].innerHTML = `Last day-${dataForEachUser[i].timeframes.daily.previous}hrs`;
+    } else if (element.textContent.toLowerCase() == "weekly") {
+      element.style.color = "white";
+      element.nextElementSibling.style.color = "hsl(246, 80%, 60%)";
+      element.previousElementSibling.style.color = "hsl(246, 80%, 60%)";
+
+      timeUsed[
+        i
+      ].innerHTML = `${dataForEachUser[i].timeframes.weekly.current}hrs`;
+      totalTime[
+        i
+      ].innerHTML = `Last week-${dataForEachUser[i].timeframes.weekly.previous}hrs`;
+    } else {
+      element.previousElementSibling.previousElementSibling.style.color =
+        "hsl(246, 80%, 60%)";
+      element.previousElementSibling.style.color = "hsl(246, 80%, 60%)";
+      element.style.color = "white";
+      timeUsed[
+        i
+      ].innerHTML = `${dataForEachUser[i].timeframes.monthly.current}hrs`;
+      totalTime[
+        i
+      ].innerHTML = `Last month-${dataForEachUser[i].timeframes.monthly.previous}hrs`;
+    }
   }
 };
